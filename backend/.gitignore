@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Build outputs and logs
+dist/
+build/
+*.log
+
+# Cache and temp files
+*.cache
+*.tmp
+
+# Dependency lock files (if not needed)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage and test output
+coverage/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

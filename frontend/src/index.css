@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Syne:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply antialiased text-slate-100 bg-[#06060e];
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(6, 6, 14, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(181, 123, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(181, 123, 255, 0.6);
+}
+
+/* Selection */
+::selection {
+  background: rgba(181, 123, 255, 0.3);
+  color: #ffffff;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-glow {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(181, 123, 255, 0.25);
+  box-shadow: 0 0 30px rgba(181, 123, 255, 0.15);
+}
+
+/* Text Gradient Effect */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #ede8ff 0%, #c084fc 50%, #b57bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyber {
+  background: linear-gradient(135deg, #38bdf8 0%, #b57bff 50%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ══ RESPONSIVE OVERRIDES FOR ALL DEVICES ══ */
+@media (max-width: 1024px) {
+  .hero-section-responsive {
+    padding: 100px 24px 60px !important;
+    min-height: auto !important;
+  }
+  .responsive-hero-layout {
+    flex-direction: column !important;
+    gap: 36px !important;
+  }
+  .responsive-hero-left {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+  .responsive-hero-right {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+  .responsive-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .responsive-stats-bar {
+    flex-wrap: wrap !important;
+    padding: 0 20px !important;
+  }
+  .responsive-stats-bar > div {
+    flex: 1 1 50% !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .responsive-section-padding {
+    padding: 60px 24px !important;
+  }
+  .responsive-page-container {
+    padding: 100px 24px 60px !important;
+  }
+  .responsive-footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+  }
+  .responsive-footer-padding {
+    padding: 48px 32px 24px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .desktop-nav-links {
+    display: none !important;
+  }
+  .navbar-container {
+    padding: 0 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section-responsive {
+    padding: 84px 16px 40px !important;
+  }
+  .hero-title-responsive {
+    font-size: clamp(48px, 14vw, 110px) !important;
+  }
+  .hero-subtitle-responsive {
+    font-size: 15px !important;
+  }
+  .hero-input-row {
+    flex-direction: column !important;
+  }
+  .hero-input-row input, .hero-input-row button {
+    width: 100% !important;
+  }
+  .hero-status-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+  .responsive-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  .responsive-stats-bar > div {
+    flex: 1 1 100% !important;
+  }
+  .responsive-section-padding {
+    padding: 40px 16px !important;
+  }
+  .responsive-page-container {
+    padding: 84px 16px 36px !important;
+  }
+  .responsive-hide-mobile {
+    display: none !important;
+  }
+  .responsive-text-sm {
+    font-size: 13px !important;
+  }
+
+  .responsive-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .responsive-footer-padding {
+    padding: 40px 16px 24px !important;
+  }
+  .responsive-cta-section {
+    padding: 60px 16px 80px !important;
+  }
+  .responsive-cta-card {
+    padding: 40px 20px !important;
+  }
+  .responsive-cta-title {
+    font-size: clamp(40px, 10vw, 68px) !important;
+  }
+
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

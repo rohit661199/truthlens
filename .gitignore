@@ -1,0 +1,13 @@
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.env
+.env.local
+log.txt
+backend/test.jpg
+backend/test-api.js
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,14 @@
+{
+  "name": "truthlens",
+  "version": "1.0.0",
+  "description": "TruthLens - AI-Powered Fact-Checking and Multimodal Verification Platform",
+  "author": "Rohit Sankhala",
+  "dependencies": {
+    "react-redux": "^9.2.0"
+  },
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && node index.js",
+    "dev": "cd backend && node index.js"
+  }
+}
